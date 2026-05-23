@@ -1,0 +1,32 @@
+question_type: "single"
+
+text: >
+  A 55-year-old man presents with a three-day history of productive
+  cough, fever, and right-sided chest pain worse on inspiration. On
+  examination he has bronchial breathing and dullness to percussion
+  at the right base.
+  Observations: RR 22, SpO2 95% on air, HR 100, BP 132/84, Temp 38.6°C.
+  His PA chest X-ray is shown.
+
+options:
+  - id: lung_cancer
+    label: "Right hilar mass"
+    tags: [incorrect, oncology]
+  - id: pleural_effusion
+    label: "Right-sided pleural effusion"
+    tags: [incorrect, respiratory]
+  - id: lobar_pneumonia
+    label: "Right middle lobe pneumonia"
+    tags: [correct, respiratory]
+  - id: pneumothorax
+    label: "Right-sided pneumothorax"
+    tags: [incorrect, respiratory]
+  - id: normal
+    label: "Normal chest X-ray"
+    tags: [incorrect]
+
+correct_option_id: lobar_pneumonia
+
+images:
+  - key: "image_1.png"
+    label: "PA chest X-ray"

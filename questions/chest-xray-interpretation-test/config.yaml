@@ -1,0 +1,123 @@
+id: chest-xray-interpretation-test
+version: 1
+title: "Chest X-ray Interpretation MCQ - Test"
+description: >
+  A small test question bank for local development and CI.
+  Each question presents a clinical scenario with a PA chest X-ray
+  and asks the candidate to identify the most likely finding.
+  Uses variable format — options differ per question.
+
+type: variable
+
+item_text:
+  required: true
+
+assessment:
+  items_per_attempt: 4
+  time_limit_minutes: 10
+  min_pool_size: 5
+  randomise_selection: true
+  randomise_order: true
+  allow_immediate_retry: true
+
+  intro_page:
+    title: "Before you begin"
+    body: |
+      This is a **test assessment** with chest X-ray images.
+
+      For each case, read the clinical scenario and examine the
+      X-ray, then select the single best answer.
+
+      **Time limit**: 10 minutes.
+
+  closing_page:
+    title: "Assessment complete"
+    body: |
+      Your answers have been submitted.
+
+      Your scores and pass/fail result are shown below.
+
+pass_criteria:
+  - name: "Overall accuracy"
+    description: "≥75% of answers must be correct"
+    rule: tag_percentage
+    tag: correct
+    threshold: 0.75
+
+results:
+  certificate_download: true
+  email_student_on_pass: true
+  email_coordinator_on_pass: true
+  exam_ref_prefix: "test-cxr-"
+
+certificate:
+  orientation: portrait
+  title:
+    font: Times-Roman
+    size: 40
+    bold: true
+    colour: "#000000"
+    y: 0.70
+  subtitle:
+    text: "This certifies that"
+    font: Times-Roman
+    size: 20
+    bold: false
+    colour: "#000000"
+    y: 0.56
+  candidate_name:
+    font: Times-Roman
+    size: 26
+    bold: true
+    colour: "#000000"
+    y: 0.50
+  pass_summary:
+    font: Times-Roman
+    size: 15
+    bold: false
+    colour: "#000000"
+    y: 0.43
+  date:
+    font: Times-Roman
+    size: 15
+    bold: false
+    colour: "#000000"
+    y: 0.35
+  exam_ref:
+    font: Times-Roman
+    size: 15
+    bold: false
+    colour: "#000000"
+    y: 0.30
+  margin: 30
+
+coordinator_email:
+  subject: "Certificate issued: $exam_title — $student_name"
+  body: |
+    Dear $recipient_name,
+
+    **$student_name** has passed **$exam_title** on $completion_date.
+
+    **Score summary**: $score_summary
+
+    The certificate is attached for your records.
+
+    $institution_name
+  attach_certificate: true
+
+student_email:
+  subject: "Certificate: $exam_title"
+  body: |
+    Dear $recipient_name,
+
+    Congratulations on passing **$exam_title**!
+
+    **Date**: $completion_date
+    **Score summary**: $score_summary
+
+    Your certificate is attached to this email.
+
+    Well done!
+
+    $institution_name
+  attach_certificate: true

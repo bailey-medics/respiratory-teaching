@@ -1,0 +1,29 @@
+question_type: "single"
+
+text: >
+  A 68-year-old woman with a history of hypertension and type 2 diabetes
+  presents to her GP with progressive exertional dyspnoea. She reports
+  orthopnoea and paroxysmal nocturnal dyspnoea. On examination she has
+  a displaced apex beat and an S3 gallop.
+  Observations: RR 20, SpO2 96% on air, HR 88, BP 158/96.
+  Her PA chest X-ray is shown.
+
+options:
+  - id: pericardial_effusion
+    label: "Pericardial effusion"
+    tags: [incorrect]
+  - id: aortic_aneurysm
+    label: "Thoracic aortic aneurysm"
+    tags: [incorrect]
+  - id: normal
+    label: "Normal chest X-ray"
+    tags: [incorrect]
+  - id: cardiomegaly
+    label: "Cardiomegaly with upper lobe diversion"
+    tags: [correct]
+
+correct_option_id: cardiomegaly
+
+images:
+  - key: "image_1.png"
+    label: "PA chest X-ray"

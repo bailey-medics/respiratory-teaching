@@ -1,0 +1,28 @@
+question_type: "single"
+
+text: >
+  A 42-year-old woman attends a pre-employment health screening. She has
+  no symptoms and feels well. She is a non-smoker with no significant
+  past medical history. Clinical examination is unremarkable.
+  Observations: RR 14, SpO2 99% on air, HR 72, BP 118/76.
+  Her PA chest X-ray is shown.
+
+options:
+  - id: cardiomegaly
+    label: "Cardiomegaly"
+    tags: [incorrect, cardiac]
+  - id: hilar_lymphadenopathy
+    label: "Bilateral hilar lymphadenopathy"
+    tags: [incorrect, respiratory]
+  - id: normal
+    label: "Normal chest X-ray"
+    tags: [correct]
+  - id: pneumothorax
+    label: "Left-sided pneumothorax"
+    tags: [incorrect, respiratory]
+
+correct_option_id: normal
+
+images:
+  - key: "image_1.png"
+    label: "PA chest X-ray"

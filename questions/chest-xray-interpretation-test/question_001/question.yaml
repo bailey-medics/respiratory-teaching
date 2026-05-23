@@ -1,0 +1,27 @@
+question_type: "single"
+
+text: >
+  A 28-year-old man presents to A&E with sudden onset right-sided
+  pleuritic chest pain and breathlessness. He is tall and thin.
+  Observations: RR 24, SpO2 94% on air, HR 110, BP 120/78.
+  His PA chest X-ray is shown.
+
+options:
+  - id: pneumothorax
+    label: "Right-sided pneumothorax"
+    tags: [correct]
+  - id: pleural_effusion
+    label: "Right-sided pleural effusion"
+    tags: [incorrect]
+  - id: pneumonia
+    label: "Right lower lobe pneumonia"
+    tags: [incorrect]
+  - id: normal
+    label: "Normal chest X-ray"
+    tags: [incorrect]
+
+correct_option_id: pneumothorax
+
+images:
+  - key: "image_1.png"
+    label: "PA chest X-ray"

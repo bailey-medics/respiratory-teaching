@@ -1,0 +1,29 @@
+question_type: "single"
+
+text: >
+  A 72-year-old woman with a background of congestive heart failure
+  presents with worsening breathlessness over the past week. She has
+  bilateral ankle oedema and bibasal crackles on auscultation.
+  Observations: RR 28, SpO2 91% on air, HR 96, BP 148/92.
+  Her PA chest X-ray is shown.
+
+options:
+
+  - id: bilateral_pneumonia
+    label: "Bilateral lower lobe pneumonia"
+    tags: [incorrect]
+  - id: pulmonary_fibrosis
+    label: "Pulmonary fibrosis"
+    tags: [incorrect]
+  - id: normal
+    label: "Normal chest X-ray"
+    tags: [incorrect]
+  - id: pleural_effusion
+    label: "Right sided pleural effusions"
+    tags: [correct]
+
+correct_option_id: pleural_effusion
+
+images:
+  - key: "image_1.png"
+    label: "PA chest X-ray"
