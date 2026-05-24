@@ -15,4 +15,4 @@ scripts/            — Validation and build scripts
 
 ## Local development
 
-This repo is cloned inside the `quillmedical` monorepo at `module-repos/respiratory-teaching/` (git-ignored by the parent repo).
+This repo is cloned inside the `quillmedical` monorepo at `teaching-repos/respiratory-teaching/` (git-ignored by the parent repo).
