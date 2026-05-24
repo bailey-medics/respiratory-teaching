@@ -1,0 +1,14 @@
+# Deploy teaching content to GCS on push to main.
+# Validates content first — aborts if invalid.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    uses: bailey-medics/teaching-tooling/.github/workflows/deploy.yml@main
+    with:
+      org_id: respiratory
+    secrets: inherit
