@@ -25,5 +25,5 @@ options:
 correct_option_id: pleural_effusion
 
 images:
-  - key: "image_1.png"
+  - key: "pa-chest-xray.png"
     label: "PA chest X-ray"
