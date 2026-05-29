@@ -1,4 +1,4 @@
-version: 2
+version: 3
 title: "Chest X-ray Interpretation MCQ - Test"
 description: >
   A small test question bank for local development and CI.
