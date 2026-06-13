@@ -1,5 +1,11 @@
 moduleId: chest-xray-interpretation-test
 title: "Chest X-ray Interpretation"
+description: >
+  A small test question bank for local development and CI.
+  Each question presents a clinical scenario with a PA chest X-ray
+  and asks the candidate to identify the most likely finding.
 order: 1
 status: live
 renewalMonths: null
+coverImage: cover.png
+coverImageFocus: 30
