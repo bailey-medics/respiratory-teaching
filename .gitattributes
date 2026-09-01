@@ -1,1 +1,12 @@
-*.png filter=lfs diff=lfs merge=lfs -text
+# PNGs are plain git blobs, not LFS objects.
+#
+# This file used to declare `*.png filter=lfs diff=lfs merge=lfs`, but
+# nothing was ever committed through LFS — every image is stored as a real
+# PNG. Once CI checked out with `lfs: true`, git configured the LFS clean
+# filter, and `git diff` then rewrote each working-tree PNG to a pointer
+# before comparing, so every image looked modified and the version lock
+# failed on a branch that had touched no content.
+#
+# `-text` is kept: it is the half of the old line that was true, and it
+# stops any end-of-line normalisation being applied to binary files.
+*.png -text
