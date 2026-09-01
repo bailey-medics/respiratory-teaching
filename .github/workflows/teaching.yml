@@ -1,7 +1,12 @@
 # Teaching CI/CD — single entry point.
 #
-# Triggers on all relevant events and delegates to the teaching-tooling
+# Triggers on all relevant events and delegates to Quill's teaching
 # pipeline, which dispatches to the correct job based on event type.
+#
+# Do not rename the `pipeline` job. This repo's ruleset requires status
+# checks called "pipeline / validate" and "pipeline / check-protection",
+# composed from this job's name plus the job names in the called workflow,
+# so a rename leaves the ruleset waiting for a check that never reports.
 name: Teaching CI
 
 on:
@@ -18,7 +23,7 @@ permissions:
 
 jobs:
   pipeline:
-    uses: bailey-medics/teaching-tooling/.github/workflows/pipeline.yml@main
+    uses: bailey-medics/quillmedical/.github/workflows/teaching-pipeline.yml@main
     with:
       org_id: respiratory
     secrets: inherit
