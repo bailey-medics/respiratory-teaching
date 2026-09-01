@@ -1,0 +1,38 @@
+# TEMPORARY — delete this branch once the result is known.
+#
+# Proves two things that could only be verified by running them:
+#   1. slack-notify.yml can check out Quill's scripts from a content repo's
+#      run. It used a bare checkout, which takes whichever repository the run
+#      belongs to — here, this repo, where the validation script is absent.
+#   2. `secrets: inherit` carries SLACK_WEBHOOK_URL into a content repo run.
+#      The organisation secret's visibility was `private`, meaning private
+#      repositories only, and this repo is public.
+#
+# Deliberately not a deploy: no content is uploaded and main is untouched.
+#
+# Named feature/* because the repository ruleset requires it — branches must
+# match ^(feature|hotfix|copilot|renovate)/ and a push is refused otherwise.
+name: Slack smoke test
+
+on:
+  push:
+    branches:
+      - "feature/slack-smoke-test"
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    uses: bailey-medics/quillmedical/.github/workflows/slack-notify.yml@main
+    with:
+      channel: teaching
+      text: |
+        *🔧 Test message — please ignore*
+
+        Checking that a content repository can reach Quill's Slack notifier,
+        so that a failed teaching deploy actually tells someone.
+
+        *Repository:* ${{ github.repository }}
+        *Run:* <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>
+    secrets: inherit
