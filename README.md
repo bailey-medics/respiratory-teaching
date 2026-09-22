@@ -16,3 +16,5 @@ scripts/            — Validation and build scripts
 ## Local development
 
 This repo is cloned inside the `quillmedical` monorepo at `teaching-repos/respiratory-teaching/` (git-ignored by the parent repo).
+
+<!-- Content now syncs to quill-medical-app. See the environment isolation plan. -->
