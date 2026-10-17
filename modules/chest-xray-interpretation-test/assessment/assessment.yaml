@@ -1,4 +1,4 @@
-version: 4
+version: 5
 title: "Chest X-ray Interpretation MCQ - Test"
 description: >
   A small test question bank for local development and CI.
@@ -15,7 +15,6 @@ assessment:
   items_per_attempt: 4
   time_limit_minutes: 10
   min_pool_size: 5
-  randomise_selection: true
   randomise_order: true
   allow_immediate_retry: true
 
