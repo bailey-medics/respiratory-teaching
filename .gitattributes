@@ -10,3 +10,7 @@
 # `-text` is kept: it is the half of the old line that was true, and it
 # stops any end-of-line normalisation being applied to binary files.
 *.png -text
+
+# A test video for the self-hosted player. Binary, so no end-of-line
+# normalisation, as for the PNGs above.
+*.mp4 -text
