@@ -7,10 +7,10 @@ Contains MCQ assessment question banks and learning modules for chest X-ray inte
 ## Structure
 
 ```
-questions/          — MCQ question banks (YAML + images)
-learning/           — Learning modules (MDX, added later)
-scripts/            — Validation and build scripts
-.github/workflows/  — CI/CD (validate on PR, deploy on merge)
+questions/          - MCQ question banks (YAML + images)
+learning/           - Learning modules (MDX, added later)
+scripts/            - Validation and build scripts
+.github/workflows/  - CI/CD (validate on PR, deploy on merge)
 ```
 
 ## Local development

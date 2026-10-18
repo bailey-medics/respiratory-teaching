@@ -1,4 +1,4 @@
-# Teaching CI/CD — single entry point.
+# Teaching CI/CD - single entry point.
 #
 # Triggers on all relevant events and delegates to Quill's teaching
 # pipeline, which dispatches to the correct job based on event type.

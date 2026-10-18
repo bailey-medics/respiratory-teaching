@@ -1,10 +1,10 @@
-version: 4
+version: 5
 title: "Chest X-ray Interpretation MCQ - Test"
 description: >
   A small test question bank for local development and CI.
   Each question presents a clinical scenario with a PA chest X-ray
   and asks the candidate to identify the most likely finding.
-  Uses variable format — options differ per question.
+  Uses variable format - options differ per question.
 
 type: variable
 
@@ -15,7 +15,6 @@ assessment:
   items_per_attempt: 4
   time_limit_minutes: 10
   min_pool_size: 5
-  randomise_selection: true
   randomise_order: true
   allow_immediate_retry: true
 
@@ -91,7 +90,7 @@ certificate:
   margin: 30
 
 coordinator_email:
-  subject: "Certificate issued: $exam_title — $student_name"
+  subject: "Certificate issued: $exam_title - $student_name"
   body: |
     Dear $recipient_name,
 
