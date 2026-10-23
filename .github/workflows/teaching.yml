@@ -20,6 +20,10 @@ permissions:
   contents: read
   pull-requests: write
   id-token: write
+  # For the ClamAV mirror, a private image in Quill's GHCR that the
+  # validate job pulls to scan the content. The reusable workflow cannot
+  # hold more than this file grants it.
+  packages: read
 
 jobs:
   pipeline:
