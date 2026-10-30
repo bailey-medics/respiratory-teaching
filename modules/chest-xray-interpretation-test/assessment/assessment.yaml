@@ -1,7 +1,7 @@
 version: 5
 title: "Chest X-ray Interpretation MCQ - Test"
 description: >
-  A small test question bank for local development and CI.
+  A small test question bank.
   Each question presents a clinical scenario with a PA chest X-ray
   and asks the candidate to identify the most likely finding.
   Uses variable format - options differ per question.
